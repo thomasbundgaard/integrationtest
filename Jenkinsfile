@@ -6,9 +6,10 @@ pipeline {
     agent {
         label "master"
     }
-    parameters {
+    /*parameters {
         string(name:"targetUrl", defaultValue:"no url specified by upstream project", description:"url to test")
-    }
+    }*/
+    properties([parameters([string(defaultValue: 'no url specified', description: 'url of target project', name: 'targetUrl', trim: false)])])
        stages {
         stage('Build') {
             steps {
