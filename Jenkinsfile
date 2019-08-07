@@ -6,6 +6,9 @@ pipeline {
     agent {
         label "master"
     }
+    parameters {
+        string(name:"targetUrl", defaultValue:"no url specified by upstream project", description:"url to test")
+    }
        stages {
         stage('Build') {
             steps {
@@ -14,8 +17,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing DJ..'
-                bat 'mvn install'
+                echo "Testing URL : ${params.targetUrl}"
+                //bat 'mvn install'
             }
         }
         /*stage('run on ubuntu') {
