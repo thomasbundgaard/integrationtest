@@ -18,5 +18,10 @@
 		System.out.println(inputLine);
 		in.close();
 %>
+
+<%
+    String redirectURL = "http://my72-node:8080/index";
+    response.sendRedirect(redirectURL);
+%>
 </body>
 </html>
