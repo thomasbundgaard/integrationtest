@@ -1,8 +1,12 @@
+<%@ page import="java.net.URL" %>
+<%@ page import="java.net.URLConnection" %>
+<%@ page import="java.io.BufferedReader" %>
+<%@ page import="java.io.InputStreamReader" %>
 <html>
 <body>
 	<%
 	
-	URL targetUrl  = new URL("http://www.yahoo.com/");
+	URL targetUrl  = new URL("my72-node:8080/index");
 	URLConnection uc = targetUrl.openConnection();
 	BufferedReader in = new BufferedReader(
                         new InputStreamReader(
@@ -11,7 +15,7 @@
 
 	while ((inputLine = in.readLine()) != null) 
 		System.out.println(inputLine);
-	in.close();
+		in.close();
 %>
 </body>
 </html>
