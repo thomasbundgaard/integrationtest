@@ -22,7 +22,7 @@ pipeline {
                 //bat 'mvn install'
             }
         }
-        /*stage('run on ubuntu') {
+        stage('run on ubuntu') {
            agent {
                 label "ubuntu"
             }
@@ -54,7 +54,7 @@ pipeline {
                 bat "dir"
                 bat "minikube service integrationtest$BUILD_NUMBER-node"
             }
-        } */
+        }
     }
 
 
