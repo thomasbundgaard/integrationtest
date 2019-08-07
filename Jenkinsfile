@@ -50,7 +50,7 @@ pipeline {
             steps {
                 echo 'Deploying DJ....'
                 bat "kubectl create deployment integrationtest$BUILD_NUMBER-node --image=thomasbundgaard/testrepo:integrationtest$BUILD_NUMBER"
-                bat "kubectl expose deployment integrationtest$BUILD_NUMBER-node --type=LoadBalancer --port=8081"
+                bat "kubectl expose deployment integrationtest$BUILD_NUMBER-node --type=LoadBalancer --port=8080"
                 bat "dir"
                 bat "minikube service integrationtest$BUILD_NUMBER-node"
             }
