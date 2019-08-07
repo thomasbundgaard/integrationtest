@@ -7,7 +7,7 @@
 <h1>Test the project</h1>
 	<%
 	
-	URL targetUrl  = new URL("http://my72-node:8080/index");
+	URL targetUrl  = new URL("http://my72-node:8080/index/index.html");
 	URLConnection uc = targetUrl.openConnection();
 	BufferedReader in = new BufferedReader(
                         new InputStreamReader(
@@ -19,9 +19,9 @@
 		in.close();
 %>
 
-<%
+<--%
     String redirectURL = "http://my72-node:8080/index";
     response.sendRedirect(redirectURL);
-%>
+%-->
 </body>
 </html>
