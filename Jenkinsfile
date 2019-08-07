@@ -6,10 +6,14 @@ pipeline {
     agent {
         label "master"
     }
+
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
     /*parameters {
         string(name:"targetUrl", defaultValue:"no url specified by upstream project", description:"url to test")
     }*/
-    options([parameters([string(defaultValue: 'no url specified', description: 'url of target project', name: 'targeturl', trim: false)])])
+    //options([parameters([string(defaultValue: 'no url specified', description: 'url of target project', name: 'targeturl', trim: false)])])
        stages {
         stage('Build') {
             steps {
