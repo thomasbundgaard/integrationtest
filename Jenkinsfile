@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Testing URL : ${params.targetUrl}"
+                echo "Testing URL : ${params.TARGET_URL}"
                 //bat 'mvn install'
             }
         }
