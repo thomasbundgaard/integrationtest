@@ -8,17 +8,25 @@
 	<%!
 
 	String getResult() {
-	
+
+	String inputLine = "";
+	String result = "";
+	try {
 	    URL targetUrl  = new URL("http://my72-node:8080/index/index.html");
 	    URLConnection uc = targetUrl.openConnection();
 	    BufferedReader in = new BufferedReader(
                         new InputStreamReader(
                         uc.getInputStream()));
-	    String inputLine;
 
-	    while ((inputLine = in.readLine()) != null)
-		    return inputLine;
+	    while ((inputLine = in.readLine()) != null) {
+	        result += inputLine;
+	    }
+
 		in.close();
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+		return result;
     }
 %>
 
