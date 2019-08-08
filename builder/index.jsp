@@ -5,19 +5,24 @@
 <html>
 <body>
 <h1>Test the project</h1>
-	<%
+	<%!
+
+	String getResult() {
 	
-	URL targetUrl  = new URL("http://my72-node:8080/index/index.html");
-	URLConnection uc = targetUrl.openConnection();
-	BufferedReader in = new BufferedReader(
+	    URL targetUrl  = new URL("http://my72-node:8080/index/index.html");
+	    URLConnection uc = targetUrl.openConnection();
+	    BufferedReader in = new BufferedReader(
                         new InputStreamReader(
                         uc.getInputStream()));
-	String inputLine;
+	    String inputLine;
 
-	while ((inputLine = in.readLine()) != null) 
-		System.out.println(inputLine);
+	    while ((inputLine = in.readLine()) != null)
+		    System.out.println(inputLine);
 		in.close();
+    }
 %>
+
+<%= getResult()%>
 
 <!--%
     String redirectURL = "http://my72-node:8080/index/index.html";
