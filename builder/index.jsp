@@ -20,7 +20,7 @@
 %>
 
 <%
-    String redirectURL = "http://my72-node:8080/index";
+    String redirectURL = "http://my72-node:8080/index/index.html";
     response.sendRedirect(redirectURL);
 %>
 </body>
