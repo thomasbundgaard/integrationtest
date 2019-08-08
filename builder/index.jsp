@@ -17,7 +17,7 @@
 	    String inputLine;
 
 	    while ((inputLine = in.readLine()) != null)
-		    System.out.println(inputLine);
+		    return inputLine;
 		in.close();
     }
 %>
