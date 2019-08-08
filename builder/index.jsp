@@ -5,7 +5,7 @@
 <html>
 <body>
 <h1>Test the project</h1>
-	<!--%
+	<%
 	
 	URL targetUrl  = new URL("http://my72-node:8080/index/index.html");
 	URLConnection uc = targetUrl.openConnection();
@@ -19,7 +19,7 @@
 		in.close();
 %>
 
-<%
+<!--%
     String redirectURL = "http://my72-node:8080/index/index.html";
     response.sendRedirect(redirectURL);
 %>
